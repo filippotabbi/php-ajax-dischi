@@ -18,7 +18,8 @@ var app = new Vue({
     var _this = this;
 
     axios.get('http://localhost/php/php-ajax-dischi/call.php').then(function (response) {
-      _this.disks = response.data.response;
+      console.log(response.data);
+      _this.disks = response.data;
     });
   }
 });

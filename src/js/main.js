@@ -7,10 +7,11 @@ var app = new Vue({
     disks: [],
 
   },
-  mounted() {
+mounted() {
       axios.get('http://localhost/php/php-ajax-dischi/call.php')
       .then((response) => {
-        this.disks = response.data.response
+        console.log(response.data);
+        this.disks = response.data
 
       });
     }
